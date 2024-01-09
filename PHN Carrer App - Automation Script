@@ -1,0 +1,97 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.concurrent.TimeUnit;
+
+public class PHNCareerAutomation {
+
+    public static void main(String[] args) {
+        // Set the path to your chromedriver executable
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        try {
+            testFlowForWorkshops(driver);
+            testFlowForJobAssistanceProgram(driver);
+            testFlowForRoboticsParent(driver);
+            testFlowForRoboticsStudent(driver);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            driver.quit();
+        }
+    }
+
+    public static void testFlowForWorkshops(WebDriver driver) throws InterruptedException {
+        // Flow for Workshops
+        navigateToPage(driver, "URL_TO_WORKSHOPS_PAGE");
+
+        enterText(driver, "mobileNumber", "1234567890");
+        submitForm(driver);
+
+        enterText(driver, "otp", "123456");
+        submitForm(driver);
+
+        // Continue the script to simulate interactions with other pages in the flow...
+    }
+
+    public static void testFlowForJobAssistanceProgram(WebDriver driver) throws InterruptedException {
+        // Flow for Job Assistance Program
+        navigateToPage(driver, "URL_TO_JOB_ASSISTANCE_PAGE");
+
+        enterText(driver, "mobileNumber", "9876543210");
+        submitForm(driver);
+
+        enterText(driver, "otp", "654321");
+        submitForm(driver);
+
+        // Continue the script to simulate interactions with other pages in the flow...
+    }
+
+    public static void testFlowForRoboticsParent(WebDriver driver) throws InterruptedException {
+        // Flow for Robotics (Parent Role)
+        navigateToPage(driver, "URL_TO_ROBOTICS_PARENT_PAGE");
+
+        enterText(driver, "mobileNumber", "1112223333");
+        submitForm(driver);
+
+        enterText(driver, "otp", "789012");
+        submitForm(driver);
+
+        // Continue the script to simulate interactions with other pages in the flow...
+    }
+
+    public static void testFlowForRoboticsStudent(WebDriver driver) throws InterruptedException {
+        // Flow for Robotics (Student Role)
+        navigateToPage(driver, "URL_TO_ROBOTICS_STUDENT_PAGE");
+
+        enterText(driver, "mobileNumber", "4445556666");
+        submitForm(driver);
+
+        enterText(driver, "otp", "345678");
+        submitForm(driver);
+
+        // Continue the script to simulate interactions with other pages in the flow...
+    }
+
+    private static void navigateToPage(WebDriver driver, String url) {
+        driver.get(url);
+    }
+
+    private static void enterText(WebDriver driver, String elementId, String text) {
+        WebElement inputElement = driver.findElement(By.id(elementId));
+        inputElement.sendKeys(text);
+    }
+
+    private static void submitForm(WebDriver driver) {
+        WebElement formElement = driver.switchTo().activeElement();
+        formElement.sendKeys(Keys.ENTER);
+        // Add a wait to ensure the page is loaded after submission
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+}
