@@ -1,0 +1,14 @@
+Write your own test cases for the PHN Connect application and automation script. Aim to complete more than 300 different test cases (scenarios) across 10 different mobile numbers. You may use mobile numbers from the view user section if you have previously added them in the PHN Career application. 
+
+Perform the following types of testing for the PHN Connect application:
+ a. Functional Testing 
+ b. UI Testing 
+ c. Compatibility Testing 
+ d. Security Testing
+ e. System Testing 
+
+You can refer to the PHN Career Task Sheet (Week 1 task) to write test cases for the PHN Connect application. 
+
+Create 10 different tabs within a single Excel sheet and name them after the respective users you have added. 
+
+Rename your Excel sheet using the following format: [Your First Name]_[Your Last Name]_phn_connect_app.xlsx. For example, if your name is Chris Sharma, your Excel sheet should be named chris_sharma_phn_connect_app.xlsx. 
