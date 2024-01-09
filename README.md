@@ -101,16 +101,10 @@ This repository contains the test scenarios and procedures for the PHN Career Ap
 ### OTP Page
 - Test the OTP verification process.
 - Check for the expiration of the OTP and proper error messages.
-- Verify that users can request a new OTP if needed.
-
-... [Add test cases for each page]
+- Verify that users can request a new OTP if needed....
 
 ## Contributors
 
-- [Your Name]
-- [Contributor 1]
-- [Contributor 2]
+- DHAMODHARAN S
 
-## License
 
-This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
